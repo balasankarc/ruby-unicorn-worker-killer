@@ -1,0 +1,24 @@
+Source: ruby-unicorn-worker-killer
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Balasankar C <balasankarc@autistici.org>
+Build-Depends: debhelper (>= 7.0.50~),
+               gem2deb,
+               unicorn (>= 4)
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-unicorn-worker-killer.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-unicorn-worker-killer.git
+Homepage: https://github.com/kzk/unicorn-worker-killer
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-unicorn-worker-killer
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         unicorn (>= 4),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Kill unicorn workers by memory and request counts
+ Kill unicorn workers by memory and request counts
