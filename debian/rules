@@ -16,3 +16,5 @@
 
 %:
 	dh $@ --buildsystem=ruby --with ruby
+dh_override_installchangelogs:
+	dh_installchangelogs ChangeLog
