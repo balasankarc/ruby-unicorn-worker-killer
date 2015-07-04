@@ -1,5 +1,5 @@
-ruby-unicorn-worker-killer (0.4.2-1) UNRELEASED; urgency=medium
+ruby-unicorn-worker-killer (0.4.2-1) unstable; urgency=medium
 
   * Initial release (Closes: #791406)
 
- -- Balasankar C <balasankarc@autistici.org>  Sat, 04 Jul 2015 23:53:06 +0530
+ -- Balasankar C <balasankarc@autistici.org>  Sat, 04 Jul 2015 17:38:50 +0530

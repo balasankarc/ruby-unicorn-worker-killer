@@ -10,15 +10,22 @@ Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-unicorn-worker-killer.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-unicorn-worker-killer.git
 Homepage: https://github.com/kzk/unicorn-worker-killer
-Testsuite: autopkgtest-pkg-ruby
 XS-Ruby-Versions: all
 
 Package: ruby-unicorn-worker-killer
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
 Depends: ruby | ruby-interpreter,
+         ruby-get-process-mem,
          unicorn (>= 4),
          ${misc:Depends},
          ${shlibs:Depends}
-Description: Kill unicorn workers by memory and request counts
- Kill unicorn workers by memory and request counts
+Description: library to kill unicorn workers by memory and request counts
+ unicorn-worker-killer gem provides automatic restart of Unicorn workers based
+ on
+ 1. max number of requests, and
+ 2. process memory size (RSS)
+ without affecting any requests.
+ .
+ This will greatly improves site's stability by avoiding unexpected memory 
+ exhaustion at the application nodes.
